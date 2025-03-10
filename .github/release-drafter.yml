@@ -1,35 +1,153 @@
-name-template: 'v$NEXT_PATCH_VERSION 🌈'
-tag-template: 'v$NEXT_PATCH_VERSION'
+name-template: "v$NEXT_PATCH_VERSION 🌈"
+tag-template: "v$NEXT_PATCH_VERSION"
 categories:
-  - title: '🆕 Features'
+  - title: "🆕 Features"
     labels:
-      - 'feat'
-      - 'feature'
-      - 'enhancement'
-  - title: '🐛 Bug Fixes'
+      - "feat"
+      - "feature"
+      - "enhancement"
+  - title: "🐛 Bug Fixes"
     labels:
-      - 'fix'
-      - 'bugfix'
-      - 'bug'
-  - title: '🧰 Maintenance'
-    label: 'chore'
-  - title: '📖 Document'
-    label: 'doc'
-  - title: '🚀 CI/CD'
-    label: 'ci'
-change-template: '- $TITLE @$AUTHOR (#$NUMBER)'
+      - "fix"
+      - "bugfix"
+      - "bug"
+  - title: "🔧 Performance Improvements"
+    labels:
+      - "perf"
+  - title: "🧪 Tests"
+    label: "test"
+  - title: "🧰 Maintenance"
+    label: "chore"
+  - title: "📖 Document"
+    label: "docs"
+  - title: "🚀 CI/CD"
+    label: "ci"
+  - title: "🌎 Internationalization"
+    label: "translation"
+change-template: "- $TITLE @$AUTHOR (#$NUMBER)"
 version-resolver:
   major:
     labels:
-      - 'major'
+      - "major"
   minor:
     labels:
-      - 'minor'
+      - "minor"
   patch:
     labels:
-      - 'patch'
+      - "patch"
   default: patch
 template: |
-  ## Changes
+  <table>
+    <tbody>
+      <tr>
+        <td rowspan="2">🪟 Windows</td>
+        <td><code>EXE</code></td>
+        <td>amd64</td>
+        <td><a href="https://github.com/GopeedLab/gopeed/releases/download/v$NEXT_PATCH_VERSION/Gopeed-v$NEXT_PATCH_VERSION-windows-amd64.zip">📥</a></td>
+      </tr>
+      <tr>
+        <td><code>Portable</code></td>
+        <td>amd64</td>
+        <td><a href="https://github.com/GopeedLab/gopeed/releases/download/v$NEXT_PATCH_VERSION/Gopeed-v$NEXT_PATCH_VERSION-windows-amd64-portable.zip">📥</a></td>
+      </tr>
+      <tr>
+        <td>🍎 MacOS</td>
+        <td><code>DMG</code></td>
+        <td>universal</td>
+        <td><a href="https://github.com/GopeedLab/gopeed/releases/download/v$NEXT_PATCH_VERSION/Gopeed-v$NEXT_PATCH_VERSION-macos.dmg">📥</a></td>
+      </tr>
+      <tr>
+        <td rowspan="4">🐧 Linux</td>
+        <td><code>Flathub</code></td>
+        <td>amd64</td>
+        <td><a href="https://flathub.org/apps/com.gopeed.Gopeed">📥</a></td>
+      </tr>
+      <tr>
+        <td><code>SNAP</code></td>
+        <td>amd64</td>
+        <td><a href="https://snapcraft.io/gopeed">📥</a></td>
+      </tr>
+      <tr>
+        <td><code>DEB</code></td>
+        <td>amd64</td>
+        <td><a href="https://github.com/GopeedLab/gopeed/releases/download/v$NEXT_PATCH_VERSION/Gopeed-v$NEXT_PATCH_VERSION-linux-amd64.deb">📥</a></td>
+      </tr>
+      <tr>
+        <td><code>AppImage</code></td>
+        <td>amd64</td>
+        <td><a href="https://github.com/GopeedLab/gopeed/releases/download/v$NEXT_PATCH_VERSION/Gopeed-v$NEXT_PATCH_VERSION-linux-x86_64.AppImage">📥</a></td>
+      </tr>
+      <tr>
+        <td>🤖 Android</td>
+        <td><code>APK</code></td>
+        <td>universal</td>
+        <td><a href="https://github.com/GopeedLab/gopeed/releases/download/v$NEXT_PATCH_VERSION/Gopeed-v$NEXT_PATCH_VERSION-android.apk">📥</a></td>
+      </tr>
+      <tr>
+        <td>📱 iOS</td>
+        <td><code>IPA</code></td>
+        <td>universal</td>
+        <td><a href="https://github.com/GopeedLab/gopeed/releases/download/v$NEXT_PATCH_VERSION/Gopeed-v$NEXT_PATCH_VERSION-ios.ipa">📥</a></td>
+      </tr>
+      <tr>
+        <td>🐳 Docker</td>
+        <td>-</td>
+        <td>universal</td>
+        <td><a href="https://hub.docker.com/r/liwei2633/gopeed">📥</a></td>
+      </tr>
+      <tr>
+        <td rowspan="2">💾 Qnap</td>
+        <td rowspan="2"><code>QPKG</code></td>
+        <td>amd64</td>
+        <td><a href="https://github.com/GopeedLab/gopeed/releases/download/v$NEXT_PATCH_VERSION/gopeed-v$NEXT_PATCH_VERSION-qnap-amd64.qpkg">📥</a></td>
+      </tr>
+      <tr>
+        <td>arm64</td>
+        <td><a href="https://github.com/GopeedLab/gopeed/releases/download/v$NEXT_PATCH_VERSION/gopeed-v$NEXT_PATCH_VERSION-qnap-arm64.qpkg">📥</a></td>
+      </tr>
+      <tr>
+        <td rowspan="8">🌐 Web</td>
+        <td rowspan="3"><code>Windows</code></td>
+        <td>amd64</td>
+        <td><a href="https://github.com/GopeedLab/gopeed/releases/download/v$NEXT_PATCH_VERSION/gopeed-web-v$NEXT_PATCH_VERSION-windows-amd64.zip">📥</a></td>
+      </tr>
+      <tr>
+        <td>arm64</td>
+        <td><a href="https://github.com/GopeedLab/gopeed/releases/download/v$NEXT_PATCH_VERSION/gopeed-web-v$NEXT_PATCH_VERSION-windows-arm64.zip">📥</a></td>
+      </tr>
+      <tr>
+        <td>386</td>
+        <td><a href="https://github.com/GopeedLab/gopeed/releases/download/v$NEXT_PATCH_VERSION/gopeed-web-v$NEXT_PATCH_VERSION-windows-386.zip">📥</a></td>
+      </tr>
+      <tr>
+        <td rowspan="2"><code>MacOS</code></td>
+        <td>amd64</td>
+        <td><a href="https://github.com/GopeedLab/gopeed/releases/download/v$NEXT_PATCH_VERSION/gopeed-web-v$NEXT_PATCH_VERSION-macos-amd64.zip">📥</a></td>
+      </tr>
+      <tr>
+        <td>arm64</td>
+        <td><a href="https://github.com/GopeedLab/gopeed/releases/download/v$NEXT_PATCH_VERSION/gopeed-web-v$NEXT_PATCH_VERSION-macos-arm64.zip">📥</a></td>
+      </tr>
+      <tr>
+        <td rowspan="3"><code>Linux</code></td>
+        <td>amd64</td>
+        <td><a href="https://github.com/GopeedLab/gopeed/releases/download/v$NEXT_PATCH_VERSION/gopeed-web-v$NEXT_PATCH_VERSION-linux-amd64.zip">📥</a></td>
+      </tr>
+      <tr>
+        <td>arm64</td>
+        <td><a href="https://github.com/GopeedLab/gopeed/releases/download/v$NEXT_PATCH_VERSION/gopeed-web-v$NEXT_PATCH_VERSION-linux-arm64.zip">📥</a></td>
+      </tr>
+      <tr>
+        <td>386</td>
+        <td><a href="https://github.com/GopeedLab/gopeed/releases/download/v$NEXT_PATCH_VERSION/gopeed-web-v$NEXT_PATCH_VERSION-linux-386.zip">📥</a></td>
+      </tr>
+    </tbody>
+  </table>
+
+  # Release notes
+
+  $CHANGES
+
+  # 更新日志
 
   $CHANGES
